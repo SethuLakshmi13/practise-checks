@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>movie-list-customer-add-to-favorites</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet"  type="text/css" href="css\style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body class="bg-light">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-color">
+		<h2 class ="text-white font-style"><i class="material-icons">movie_filter</i>Movie Cruiser</h2>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapse-nav-bar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapse-nav-bar">	
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link  text-white" href="movie-list-customer.html">Movies</a>
+				</li>
+				<li class="nav-item">
+					<i class="material-icons text-white"style='font-size:34px;'>perm_identity</i>
+				</li>
+				<li class="nav-item ml-auto pt-2">
+					<span class="text-white nav-text">John</span>
+				</li
+				<li class="nav-item">
+					<a class="nav-link text-white" href="movie-list.html">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="jumbotron">
+		<div class="container-fluid">
+			<h3 class="search-text">Find Movies<h3>
+				<div class="input-group">
+					<button type="submit"><i class="material-icons">theaters</i></button>
+					<input type="text" name="" class="form-control" placeholder="Search Movies"/>
+				</div>
+		</div>
+	</div>
+	<div class="container-fluid mb-5">
+	<div class="row">
+	<div class="col-12 col-lg-3 col-md-6 col-sm-12 pt-2">
+		<div class="card border-light">
+			<div class="card-header">
+			<ul class="nav nav-tabs card-header-tabs" id="movie-list" role="tablist">
+				<li class="nav-item"> 
+					 <a class="nav-link active"  href="#description" role="tab" aria-controls="description" aria-selected="true">Preview</a>
+				</li>
+				<li class="nav-item"> 
+					 <a class="nav-link"  href="#details" role="tab" aria-controls="details" aria-selected="false">About</a>
+				</li>
+				<li class="nav-item"> 
+					 <a class="nav-link"  href="#trailer" role="tab" aria-controls="trailer" aria-selected="false">Trailer</a>
+				</li>
+			</ul>
+			</div>
+			<div class="card-body">
+				<div class="tab-content mt-3">
+					<div class="tab-pane active" id="description" role="tabpanel" aria-labelledby="description-tab">
+						<div class="row">
+							<div class="col-6 col-lg-6 col-md-6 col-sm-6">
+								<div class="inner">
+									<img class="card-img hover" src="https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg" height="300px" width="200px"  />
+								</div>
+							</div>
+						<div class="col-6 col-lg-6 col-md-6 col-sm-6">
+							<h5>Avatar</h5>
+							<div class="mt-4 box-office-color">$2,787,965,087</div>
+							<div class="mt-2 genre-style"><strong>Science Fiction</strong></div>
+							<div class="d-flex justify-content-start pt-2 mt-2"><i class="material-icons">play_circle_outline</i><span class="badge badge-has-teaser text-white">Has Teaser</span></div>
+							<div class="mt-5 p-3"></div>
+							<div class="mt-3 p-0"><a href="movie-list-customer-add-to-favorites.html" class="btn bg-button-color text-white shadow-lg "><i class="material-icons"id="icon-size">favorite</i>Add to Favorites</a></div>
+						</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="details" role="tabpanel" aria-labelledby="details-tab">
+						<h3>Avatar</h3>
+						<div>Avatar is a science fiction film written and directed by James Cameron.In this movie Jake, a paraplegic marine, replaces his brother on the Na'vi inhabited Pandora for a corporate mission.
+							He is accepted by the natives as one of their own but he must decide where his loyalties lie.</div>
+						<div class="pt-1 heading-color">
+						<div>Rating : U/A</div>
+						<div>Language : English</div>
+						<div>Runtime : 2:41:44</div>
+						<div class="justify-content-start" class="pt-1"><i class="material-icons text-primary" id="icon-size">thumb_up</i>88%</div>
+						</div>
+					</div>
+					<div class="tab-pane" id="trailer" role="tabpanel" aria-labelledby="trailer-tab">
+						<div class="embed-responsive embed-responsive-4by3">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5PSNL1qE6VY"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 alert alert-success mb-0" role="alert">Movie Added Successfully.</div>
+		</div>
+	</div>
+	
+	<div class="col-12 col-lg-3 col-md-6 col-sm-12 pt-2">
+		<div class="card border-light">
+		<div class="card-header">
+			<ul class="nav nav-tabs card-header-tabs" id="movie-list" role="tablist">
+				<li class="nav-item"> 
+					 <a class="nav-link active"  href="#description-avengers" role="tab" aria-controls="description-avengers" aria-selected="true">Preview</a>
+				</li>
+				<li class="nav-item"> 
+					 <a class="nav-link"  href="#details-avengers" role="tab" aria-controls="details-avengers" aria-selected="false">About</a>
+				</li>
+				<li class="nav-item"> 
+					 <a class="nav-link"  href="#trailer-avengers" role="tab" aria-controls="trailer-avengers" aria-selected="false">Trailer</a>
+				</li>
+			</ul>
+		</div>
+		<div class="card-body">
+			<div class="tab-content mt-3">
+				<div class="tab-pane active" id="description-avengers" role="tabpanel" aria-labelledby="description-avengers-tab">
+				<div class="row">
+					<div class="col-6 col-lg-6 col-md-6 col-sm-6">
+						<div class="inner">
+						<img class="card-img hover" src="https://cdn.shopify.com/s/files/1/1148/2822/products/PBMAAOU088_1024x1024.jpg?v=1510903066" height="300px" width="200px"  />
+						</div>
+					</div>
+					<div class="col-6 col-lg-6 col-md-6 col-sm-6">
+						<h5>The Avengers</h5>
+						<div class="mt-3 box-office-color">$1,518,812,988</div>
+						<div class="mt-2 genre-style"><strong>SuperHero</strong></div>
+						<div class="mt-5 p-4"></div>
+						<div class="mt-5 p-0"><a href="movie-list-customer-add-to-favorites.html" class="btn bg-button-color text-white shadow-lg "><i class="material-icons"id="icon-size">favorite</i>Add to Favorites</a></div>
+					</div>
+				</div>
+				</div>
+				<div class="tab-pane" id="details-avengers" role="tabpanel" aria-labelledby="details-avengers-tab">
+						<h3>Avengers</h3>
+						<div>The Marvel Cinematic Universe (MCU) films are a series of American superhero films produced by Marvel Studios based on characters that appear in publications by Marvel Comics. 
+						The MCU is the shared universe in which all of the films are set.</div>
+						<div class="pt-1 heading-color">
+						<div>Rating : U</div>
+						<div>Language : English</div>
+						<div>Runtime : 2:23:00</div>
+						<div class="justify-content-start" class="pt-1"><i class="material-icons text-primary" id="icon-size">thumb_up</i>90%</div>
+						</div>
+				</div>
+				<div class="tab-pane" id="trailer-avengers" role="tabpanel" aria-labelledby="trailer-tab">
+						<div class="embed-responsive embed-responsive-4by3">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eOrNdBpGMv8"></iframe>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="p-4"></div>
+		</div>
+	</div>
+	
+	<div class="col-12 col-lg-3 col-md-6 col-sm-12 pt-2">
+		<div class="card border-light">
+			<div class="card-header">
+				<ul class="nav nav-tabs card-header-tabs" id="movie-list" role="tablist">
+					<li class="nav-item"> 
+						<a class="nav-link active"  href="#description-titanic" role="tab" aria-controls="description-titanic" aria-selected="true">Preview</a>
+					</li>
+					<li class="nav-item"> 
+						<a class="nav-link"  href="#details-titanic" role="tab" aria-controls="details-titanic" aria-selected="false">About</a>
+					</li>
+					<li class="nav-item"> 
+						<a class="nav-link"  href="#trailer-titanic" role="tab" aria-controls="trailer-titanic" aria-selected="false">Trailer</a>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body">
+			<div class="tab-content mt-3">
+				<div class="tab-pane active" id="description-titanic" role="tabpanel" aria-labelledby="description-titanic-tab">
+				<div class="row">
+					<div class="col-6 col-lg-6 col-md-6 col-sm-6">
+						<div class="inner">
+						<img class="card-img hover" src="https://d1w8cc2yygc27j.cloudfront.net/376890639361779221/-964579459415210037.jpg" height="300px" width="200px"  />
+						</div>
+					</div>
+					<div class="col-6 col-lg-6 col-md-6 col-sm-6">
+						<h5>Titanic</h5>
+						<div class="mt-3 box-office-color">$2,187,463,944</div>
+						<div class="mt-2 genre-style"><strong>Romance</strong></div>
+						<div class="mt-5 p-4"></div>
+						<div class="float-bottom mt-5"><a href="movie-list-customer-add-to-favorites.html" class="btn bg-button-color text-white shadow-lg "><i class="material-icons"id="icon-size">favorite</i>Add to Favorites</a></div>
+					</div>
+				</div>
+				</div>
+				<div class="tab-pane" id="details-titanic" role="tabpanel" aria-labelledby="details-titanic-tab">
+						<h3>Titanic</h3>
+						<div>Seventeen-year-old Rose hails from an aristocratic family and is set to be married. 
+						When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.
+						The director felt a love story interspersed with the human loss would be essential to convey the emotional impact of the disaster.</div>
+						<div class="pt-1 heading-color">
+						<div>Rating : U/A</div>
+						<div>Language : English</div>
+						<div>Runtime : 3:15:00</div>
+						<div class="justify-content-start" class="pt-1"><i class="material-icons text-primary" id="icon-size">thumb_up</i>95%</div>
+						</div>
+				</div>
+				<div class="tab-pane" id="trailer-titanic" role="tabpanel" aria-labelledby="trailer-titanic">
+						<div class="embed-responsive embed-responsive-4by3">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2e-eXJ6HgkQ"></iframe>
+						</div>
+				</div>
+			</div>
+			</div>
+			<div class="p-4"></div>
+		</div>
+	</div>
+	
+	<div class="col-12 col-lg-3 col-md-6 col-sm-12 pt-2">
+		<div class="card border-light">
+			<div class="card-header">
+				<ul class="nav nav-tabs card-header-tabs" id="movie-list" role="tablist">
+					<li class="nav-item"> 
+						<a class="nav-link active"  href="#description-jurrasic" role="tab" aria-controls="description-jurrasic" aria-selected="true">Preview</a>
+					</li>
+					<li class="nav-item"> 
+						<a class="nav-link"  href="#details-jurassic" role="tab" aria-controls="details-jurassic" aria-selected="false">About</a>
+					</li>
+					<li class="nav-item"> 
+						<a class="nav-link"  href="#trailer-jurassic" role="tab" aria-controls="trailer-jurassic" aria-selected="false">Trailer</a>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body">
+			<div class="tab-content mt-3">
+				<div class="tab-pane active" id="description-jurrasic" role="tabpanel" aria-labelledby="description-jurrasic-tab">
+				<div class="row">
+					<div class="col-6 col-lg-6 col-md-6 col-sm-6">
+						<div class="inner">
+						<img class="card-img hover" src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/jurassic-world-5-movie-poster-prints.jpg" height="300px" width="200px"  />
+						</div>
+					</div>
+					<div class="col-6 col-lg-6 col-md-6 col-sm-6">
+						<h5>Jurassic World</h5>
+						<div class="mt-4 box-office-color">$1,671,713,208</div>
+						<div class="mt-2 genre-style"><strong>Science Fiction</strong></div>
+						<div class="d-flex justify-content-start pt-2 mt-2"><i class="material-icons">play_circle_outline</i><span class="badge badge-has-teaser text-white">Has Teaser</span></div>
+						<div class="mt-5 p-3"></div>
+						<div class="mt-3"><a href="movie-list-customer-add-to-favorites.html" class="btn bg-button-color text-white shadow-lg "><i class="material-icons"id="icon-size">favorite</i>Add to Favorites</a></div>
+					</div>
+				</div>
+				</div>
+				<div class="tab-pane" id="details-jurassic" role="tabpanel" aria-labelledby="details-jurassic-tab">
+						<h3>Jurassic</h3>
+						<div>The Jurassic World luxury resort provides a habitat for an array of genetically engineered dinosaurs, 
+						including the vicious and intelligent Indominus rex. 
+						When the massive creature escapes,causes disaster.Now, it's up to a former military man and animal expert (Chris Pratt) to use his special skills to save the people.</div>
+						<div class="pt-1 heading-color">
+						<div>Rating : U</div>
+						<div>Language : English</div>
+						<div>Runtime : 2:4:00</div>
+						<div class="justify-content-start" class="pt-1"><i class="material-icons text-primary" id="icon-size">thumb_up</i>80%</div>
+						</div>
+				</div>
+				<div class="tab-pane" id="trailer-jurassic" role="tabpanel" aria-labelledby="trailer-jurassic-tab">
+						<div class="embed-responsive embed-responsive-4by3">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RFinNxS5KN4"></iframe>
+						</div>
+				</div>
+			</div>
+			</div>
+			<div class="p-4"></div>
+		</div>
+	</div>
+	
+	<div class="col-12 col-lg-3 col-md-6 col-sm-12 pt-2">
+		<div class="card border-light">
+			<div class="card-header">
+				<ul class="nav nav-tabs card-header-tabs" id="movie-list" role="tablist">
+					<li class="nav-item"> 
+						<a class="nav-link active"  href="#description-avengers-end" role="tab" aria-controls="description-avengers-end" aria-selected="true">Preview</a>
+					</li>
+					<li class="nav-item"> 
+						<a class="nav-link"  href="#details-avengers-end" role="tab" aria-controls="details-avengers-end" aria-selected="false">About</a>
+					</li>
+					<li class="nav-item"> 
+						<a class="nav-link"  href="#trailer-avengers-end" role="tab" aria-controls="trailer-avengers-end" aria-selected="false">Trailer</a>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body">
+			<div class="tab-content mt-3">
+				<div class="tab-pane active" id="description-avengers-end" role="tabpanel" aria-labelledby="description-avengers-end-tab">
+				<div class="row">
+					<div class="col-6 col-lg-6 col-md-6 col-sm-6">
+						<div class="inner">
+						<img class="card-img hover" src="https://img.purch.com/o/aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8yNTMvMDQ3L2kwMi9FbmRnYW1lX09kZW9uX0xlZnQuanBlZw==" height="300px" width="200px"  />
+						</div>
+					</div>
+					<div class="col-6 col-lg-6 col-md-6 col-sm-6">
+						<h5>Avengers : End Game</h5>
+						<div class="mt-4 box-office-color">$2,750,760,348</div>
+						<div class="mt-2 genre-style"><strong>Superhero</strong></div>
+						<div class="d-flex justify-content-start pt-2 mt-2"><i class="material-icons">play_circle_outline</i><span class="badge badge-has-teaser text-white">Has Teaser</span></div>
+						<div class="mt-5 p-3"></div>
+						<div class="mt-3"><a href="movie-list-customer-add-to-favorites.html" class="btn bg-button-color text-white shadow-lg "><i class="material-icons"id="icon-size">favorite</i>Add to Favorites</a></div>
+					</div>
+				</div>
+				</div>
+				<div class="tab-pane" id="details-avengers-end" role="tabpanel" aria-labelledby="details-avengers-end-tab">
+						<h3>Avengers : End Game</h3>
+						<div>Thanos used the Infinity Gauntlet to disintegrate half of all life in the universe,
+						Tony Stark and Nebula from deep space and returns them to Earth, 
+						where they reunite with the remaining Avengers.They plan to retake and use the Infinity Stones to reverse "the Snap",
+						but Thanos reveals he destroyed the Stones to prevent their further use</div>
+						<div class="pt-1 heading-color">
+						<div>Rating : U</div>
+						<div>Language : English</div>
+						<div>Runtime : 3:2:00</div>
+						<div class="justify-content-start" class="pt-1"><i class="material-icons text-primary" id="icon-size">thumb_up</i>92%</div>
+						</div>
+				</div>
+				<div class="tab-pane" id="trailer-avengers-end" role="tabpanel" aria-labelledby="trailer-avengers-end-tab">
+						<div class="embed-responsive embed-responsive-4by3">
+							<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/TcMBFSGVi1c"></iframe>
+						</div>
+				</div>
+			</div>
+			</div>
+			<div class="p-4"></div>
+		</div>
+	</div>
+	</div>
+	</div>
+</body>
+<footer class="bg-color text-white p-2">Copyright2019</footer>
+<script>
+$('#movie-list a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+</html>

@@ -1,0 +1,36 @@
+package com.cognizant.menuitemservice.dto;
+
+import java.util.Set;
+
+import com.cognizant.menuitemservice.model.MenuItem;
+
+public class CartDTO {
+	private Set<MenuItem> menuItemList;
+	private double total;
+
+	public CartDTO() {
+
+	}
+
+	public CartDTO(Set<MenuItem> menuItemList, double total) {
+		this.menuItemList = menuItemList;
+		this.total = total;
+	}
+
+	public double getTotal() {
+		return total;
+	}
+
+	public void setTotal(double total) {
+		this.total = total;
+	}
+
+	public Set<MenuItem> getMenuItemList() {
+		return menuItemList;
+	}
+
+	public void setMenuItemList(Set<MenuItem> menuItemList) {
+		this.menuItemList = menuItemList;
+	}
+
+}

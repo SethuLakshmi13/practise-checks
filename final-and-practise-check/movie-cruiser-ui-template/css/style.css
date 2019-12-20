@@ -1,0 +1,56 @@
+.bg-color{
+	background-color: #880e4f;
+	font-size: 15px;
+}
+.jumbotron{
+	background-image : url(https://c4.wallpaperflare.com/wallpaper/577/496/4/peanuts-comic-snoopy-charlie-brown-theaters-wallpaper-preview.jpg);
+	background-repeat: repeat;
+}
+.search-text{
+	color: #ffffff;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.validation-color{
+	color: #f44336 ;
+}
+.box-office-color{
+	color:#FF8800;
+}
+.font-style{
+	text-shadow: 2px 2px #ec407a ;
+}
+.badge-has-teaser{
+	background-color: #9933CC;
+}
+.bg-button-color{
+	background-color: #ec407a;
+}
+.inner{
+    overflow: hidden;
+}
+.inner img{
+    transition: all 1.5s ease;
+}
+.inner:hover img{
+    transform: scale(1.5);
+}
+.genre-style{
+	font-size: 15px;
+	color: #3e2723;
+}
+.heading-color{
+	color:  #ec407a;
+}
+
+.font-size-active{
+	font-size: 15px;
+}
+.card:hover{
+	box-shadow: -1px 9px 40px -5px rgba(255,46, 120, 0.7);
+}
+#list-content-size{
+	font-size: 20px;
+}
+#icon-size{
+	font-size: 15px;
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<bean id="menuItemList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="menuItemOne" />
+				<ref bean="menuItemTwo" />
+				<ref bean="menuItemThree" />
+				<ref bean="menuItemFour" />
+				<ref bean="menuItemFive" />
+			</list>
+		</constructor-arg>
+	</bean>
+	<bean id="menuItemOne" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="1" />
+		<property name="name" value="Sandwich" />
+		<property name="price" value="99.0" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="03/15/2017" />
+		<property name="category" value="Main Course" />
+		<property name="freeDelivery" value="true" />
+		<property name="image" value="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1353&amp;q=80"/>
+	</bean>
+	<bean id="menuItemTwo" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="2" />
+		<property name="name" value="Burger" />
+		<property name="price" value="129.0" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="12/23/2017" />
+		<property name="category" value="Main Course" />
+		<property name="freeDelivery" value="false" />
+		<property name="image" value="https://images.unsplash.com/photo-1457460866886-40ef8d4b42a0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1350&amp;q=80"/>
+	</bean>
+	<bean id="menuItemThree" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="3" />
+		<property name="name" value="Pizza" />
+		<property name="price" value="149.0" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="08/21/2017" />
+		<property name="category" value="Main Course" />
+		<property name="freeDelivery" value="false" />
+		<property name="image" value="https://images.unsplash.com/photo-1542282811-943ef1a977c3?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1352&amp;q=80"/>
+	</bean>
+	<bean id="menuItemFour" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="4" />
+		<property name="name" value="French Fries" />
+		<property name="price" value="57.0" />
+		<property name="active" value="false" />
+		<property name="dateOfLaunch" value="07/02/2017" />
+		<property name="category" value="Starters" />
+		<property name="freeDelivery" value="true" />
+		<property name="image" value="https://images.unsplash.com/photo-1518013431117-eb1465fa5752?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60"/>
+	</bean>
+	<bean id="menuItemFive" class="com.cognizant.truyum.model.MenuItem">
+		<property name="id" value="5" />
+		<property name="name" value="Chocolate Brownie" />
+		<property name="price" value="32.0" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="11/02/2022" />
+		<property name="category" value="Dessert" />
+		<property name="freeDelivery" value="true" />
+		<property name="image" value="https://images.unsplash.com/photo-1498602679121-1adc04bd257f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1375&amp;q=80"/>
+	</bean>
+</beans>

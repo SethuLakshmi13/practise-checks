@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<bean id="movieLists" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="movieOne" />
+				<ref bean="movieTwo" />
+				<ref bean="movieThree" />
+				<ref bean="movieFour" />
+				<ref bean="movieFive" />
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="movieOne" class="com.cognizant.movie.model.Movies">
+		<property name="id" value="1" />
+		<property name="title" value="Avatar" />
+		<property name="boxOffice" value="2787965087" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="12/23/2017" />
+		<property name="genre" value="Science Fiction" />
+		<property name="hasTeaser" value="true" />
+		<property name="image" value="https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg"/>
+		<property name="description" value="Avatar is a science fiction film written and directed by James Cameron
+                  							In this movie Jake, a paraplegic marine, replaces his brother on the Na'vi inhabited Pandora for a corporate mission
+                 						    He is accepted by the natives as one of their own but he must decide where his loyalties lie.His choice of Loyatily is the major turn in the movie"/>
+        <property name="rating" value="U/A"/>
+        <property name="language" value="English"/>
+        <property name="runtime" value="2.41.44"/>
+        <property name="like" value="88"/>
+        <property name="trailer" value="https://www.youtube.com/embed/5PSNL1qE6VY"/>
+	</bean>
+	
+	<bean id="movieTwo" class="com.cognizant.movie.model.Movies">
+		<property name="id" value="2" />
+		<property name="title" value="The Avengers" />
+		<property name="boxOffice" value="1518812988" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="03/15/2017" />
+		<property name="genre" value="Super Hero" />
+		<property name="hasTeaser" value="false" />
+		<property name="image" value="https://cdn.shopify.com/s/files/1/1148/2822/products/PBMAAOU088_1024x1024.jpg?v=1510903066"/>
+		<property name="description" value="The Marvel Cinematic Universe (MCU) films are a series of American superhero films produced
+                  							by Marvel Studios based on characters that appear in publications by Marvel Comics.
+                  							The MCU is the shared universe in which all of the films are set.It's a superhero movie based on Adventures"/>
+        <property name="rating" value="U/A"/>
+        <property name="language" value="English"/>
+        <property name="runtime" value="2.23.00"/>
+        <property name="like" value="90"/>
+        <property name="trailer" value="https://www.youtube.com/embed/eOrNdBpGMv8"/>
+	</bean>
+	
+	<bean id="movieThree" class="com.cognizant.movie.model.Movies">
+		<property name="id" value="3" />
+		<property name="title" value="Titanic" />
+		<property name="boxOffice" value="2187463944" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="08/21/2017" />
+		<property name="genre" value="Romance" />
+		<property name="hasTeaser" value="false" />
+		<property name="image" value="https://d1w8cc2yygc27j.cloudfront.net/376890639361779221/-964579459415210037.jpg"/>
+		<property name="description" value="Seventeen-year-old Rose hails from an aristocratic family and is set to be married
+     										When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him
+      										The director felt a love story interspersed with the human loss would be essential to convey the emotional impact of the disaster."/>
+        <property name="rating" value="A"/>
+        <property name="language" value="English"/>
+        <property name="runtime" value="3.15.00"/>
+        <property name="like" value="95"/>
+        <property name="trailer" value="https://www.youtube.com/embed/2e-eXJ6HgkQ"/>
+	</bean>
+	
+	<bean id="movieFour" class="com.cognizant.movie.model.Movies">
+		<property name="id" value="4" />
+		<property name="title" value="Jurassic World" />
+		<property name="boxOffice" value="1671713208" />
+		<property name="active" value="false" />
+		<property name="dateOfLaunch" value="02/07/2017" />
+		<property name="genre" value="Science Fiction" />
+		<property name="hasTeaser" value="true" />
+		<property name="image" value="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/jurassic-world-5-movie-poster-prints.jpg"/>
+		<property name="description" value="The Jurassic World luxury resort provides a habitat for an array of genetically engineered dinosaurs
+                   							including the vicious and intelligent Indominus rex.When the massive creature escapes,causes disaster
+                   							Now, it's up to a former military man and animal expert (Chris Pratt) to use his special skills to save the people."/>
+        <property name="rating" value="U"/>
+        <property name="language" value="English"/>
+        <property name="runtime" value="2.4.00"/>
+        <property name="like" value="80"/>
+        <property name="trailer" value="https://www.youtube.com/embed/RFinNxS5KN4"/>
+	</bean>
+	
+	<bean id="movieFive" class="com.cognizant.movie.model.Movies">
+		<property name="id" value="5" />
+		<property name="title" value="Avengers : End Game" />
+		<property name="boxOffice" value="2750760348" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch" value="02/11/2022" />
+		<property name="genre" value="Super Hero" />
+		<property name="hasTeaser" value="true" />
+		<property name="image" value="https://img.purch.com/o/aHR0cDovL3d3dy5uZXdzYXJhbWEuY29tL2ltYWdlcy9pLzAwMC8yNTMvMDQ3L2kwMi9FbmRnYW1lX09kZW9uX0xlZnQuanBlZw=="/>
+		<property name="description" value="Thanos used the Infinity Gauntlet to disintegrate half of all life in the universe
+                   						    Tony Stark and Nebula from deep space and returns them to Earth
+                    					    where they reunite with the remaining Avengers.They plan to retake and use the Infinity Stones to reverse the Snap
+                    						but Thanos reveals he destroyed the Stones to prevent their further use"/>
+        <property name="rating" value="U"/>
+        <property name="language" value="English"/>
+        <property name="runtime" value="3.2.00"/>
+        <property name="like" value="92"/>
+        <property name="trailer" value="https://www.youtube.com/embed/TcMBFSGVi1c"/>
+	</bean>
+	
+</beans>

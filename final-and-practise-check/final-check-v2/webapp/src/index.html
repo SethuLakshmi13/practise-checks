@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Webapp</title>
+  <base href="/">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.icon">
+</head>
+<body class="bg-light">
+  <app-root></app-root>
+</body>
+<script>
+  $(document).ready(function() {
+  var $videoSrc;  
+  $('.video-btn').click(function() {
+      $videoSrc = $(this).data( "src" );
+      $("#video").attr('src',$videoSrc); 
+      
+  });
+  $('#myModal').on('hide.bs.modal', function (e) {
+      $("#video").attr('src',$videoSrc); 
+      $videoSrc='';
+  });
+  }); 
+</script>
+
+<footer class="bg-color text-white p-2 fixed-bottom">Copyright2019</footer>
+</html>

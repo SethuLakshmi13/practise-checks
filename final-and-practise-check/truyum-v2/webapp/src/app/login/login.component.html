@@ -1,0 +1,40 @@
+<div class="container mt-5">
+	<form [formGroup]="loginForm" (submit)=send(loginForm)>
+		<div class="form-row">
+			<div class="form-group col-lg-4 col-md-12 col-sm-12"></div>
+			<div class="form-group col-lg-5 col-md-12 col-sm-12 border rounded p-3">
+				<h3>Login</h3>
+					<span *ngIf="signupStatus==true">
+						<div class="alert alert-danger">New users need to Signup to access the Application/Invalid Credentials </div>
+					</span>
+					<label for="userName" class="mr-lg-2 mt-3"> User Name </label>
+					<input 
+						type="text" 
+						class="form-control" 
+						id="userName" 
+						name="userName"
+						placeholder="Enter username"
+						formControlName="userName" />
+					<div *ngIf="(loginForm.get('userName').errors?.required) && (loginForm.get('userName').touched)" class="text-danger">
+						Enter Username
+					</div>
+					<label for="password" class="mr-lg-2 mt-3">Password </label>
+					<input 
+						type="password" 
+						class="form-control"
+						id="password" 
+						name="password"
+						placeholder="Enter password"
+						formControlName="password"/>
+					<div *ngIf="(loginForm.get('password').errors?.required) && (loginForm.get('password').touched)" class="text-danger">
+						Enter Password
+					</div>
+					<div class="d-flex justify-content-between">
+						<button type="submit"[disabled]="!loginForm.valid" class="btn bg-color mr-lg-2 text-white mt-3 mb-3">Login</button> 
+						<span class="text-secondary mt-3 mb-3">New here?<a  routerLink="/signup" routerLinkActive="active-link">Signup</a></span>
+					</div>
+			</div>
+			<div class="form-group col-lg-4 col-md-12 col-sm-12"></div>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>login-validation</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet"  type="text/css" href="css\style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-color">
+		<h2 class ="text-white"><i class="material-icons">restaurant_menu</i>truYum</h2>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapse-nav-bar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapse-nav-bar">	
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link  text-white" href="menu-item-list.html">Menu Items</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="login.html">Login </a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="signup.html">Signup</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container mt-5">
+		<div class="form-row">
+			<div class="form-group col-lg-4 col-md-12 col-sm-12">
+			</div>
+			<div class="form-group col-lg-4 col-md-12 col-sm-12 border rounded p-3">
+				<h3>Login</h3>
+				<div class="alert alert-primary pt-3" role="alert">
+					Please login before adding an item to the Cart
+				</div>
+				<div class="alert alert-danger pt-3" role="alert">
+					Invalid Username/Password
+				</div>
+				<label for="userName" class="mr-lg-2 mt-3"> User Name </label>
+				<input type="text" class="form-control" id="userName" name="userName" placeholder="Enter user name"/>
+				<label for="password" class="mr-lg-2 mt-3">Password </label>
+				<input type="text" class="form-control" id="password" name="password" placeholder="Enter Password"/>
+				<div class="d-flex justify-content-between"><button type="submit" class="btn bg-color mr-lg-2 text-white mt-3 mb-3">Login</button> 
+				<span class="text-secondary mt-3 mb-3">New here?<a href="signup.html">Signup</a></span></div>
+			</div>
+			<div class="form-group col-lg-4 col-md-12 col-sm-12">
+			</div>
+		</div>
+	</div>
+</body>
+<footer class="fixed-bottom bg-color text-white p-2">Copyright2019</footer>
+</html>
+				

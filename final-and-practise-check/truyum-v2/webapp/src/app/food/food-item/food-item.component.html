@@ -1,0 +1,44 @@
+<div class="card">
+    <img class="card-img-top" [src]="items.image"/>
+        <div class="card-body">
+            <div class="row">
+                <h5 class="col-6 col-lg-6 col-md-6 col-sm-6">{{items.name}}</h5>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-end">{{items.price}}</div>
+            </div>
+            <div class="row">
+                <div class=" col-6 col-lg-6 col-md-6 col-sm-6">
+                    <span *ngIf="userRole=='admin'">
+                        <span class="badge badge-success " *ngIf="items.active=='Yes', else inactive">Active</span>
+                            <ng-template #inactive> <span class="badge badge-danger">InActive</span> </ng-template>
+                    </span>{{items.category}}
+                </div>
+                <div class="col-6 col-lg-6 col-md-6 col-sm-6 d-flex justify-content-end"  *ngIf="items.freeDelivery=='Yes'">
+                    <i class="material-icons">local_shipping</i><span class="badge badge-primary">Free</span>
+                </div>
+            </div>
+            <div class="row pt-2">
+                <div class=" col-4 col-lg-4 col-md-4 col-sm-4">
+                    <span *ngIf="userRole=='admin'">
+                        <i class="material-icons" id="icon-size">schedule</i>Launch 
+                        <div>{{items.dateOfLaunch| date: 'dd/MM/yyyy'}}</div>
+                    </span>
+                </div>
+                <div class=" col-8 col-lg-8 col-md-8 col-sm-8 d-flex justify-content-end">
+                    <span *ngIf="userRole=='admin'" >
+                        <a (click)="clickEdit(items.id)" class=" btn bg-color"><i class="material-icons" id="icon-size">edit</i>Edit</a>
+                    </span>
+                    <span *ngIf="userRole!='admin'">
+                        <a type="button" class="btn bg-color" (click)="getId(items.id)">
+                        <i class="material-icons" id="icon-size">shopping_cart</i>AddToCart</a>
+                    </span>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class=" col-12 col-lg-12 col-md-12 col-sm-12 ">
+                    <div class="card-footer text-success"><div *ngIf="id==items.id">{{status}}</div>
+                        <div *ngIf="cartItemId==items.id">"Item Added to Cart Successfully"</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

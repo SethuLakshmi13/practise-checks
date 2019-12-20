@@ -1,0 +1,15 @@
+<div class="jumbotron bg-cover">
+		<div class="container-fluid">
+			<h3 class="search-text">Find Food</h3>
+				<div class="input-group">
+					<button type="submit"><i class="material-icons">emoji_food_beverage</i></button>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="Search Food"
+                        name="search"
+                        [(ngModel)]="searchString"
+                        (keyup)="filterData()"/>
+				</div>
+		</div>
+</div>

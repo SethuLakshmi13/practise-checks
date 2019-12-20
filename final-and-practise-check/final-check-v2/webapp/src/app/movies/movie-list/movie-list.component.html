@@ -1,0 +1,91 @@
+<div class="card">
+    <div class="card-header  border-light card-color">
+    </div>
+    <div class="card-body  border-light">
+        <div class="row">
+            <div class="col-6 col-lg-6 col-md-6 col-sm-6">
+                <div class="inner">
+                    <img class="card-img hover" [src]="list.image" height="300px" width="200px"/>
+                </div>
+            </div>
+            <div class="col-6 col-lg-6 col-md-6 col-sm-6">
+                <h5>{{list.title}}</h5>
+                <span *ngIf="userRole=='admin'">
+                    <span class="badge badge-success font-size-active mt-3" *ngIf="list.active=='Yes',else inactive">Active</span>
+                        <ng-template #inactive><span class="badge badge-danger font-size-active mt-3">Inactive</span></ng-template>
+                </span>
+                <div class="mt-4 box-office-color">${{list.boxOffice}}</div>
+                <div class="mt-2 genre-style">{{list.genre}} </div>
+                <div class="d-flex justify-content-start pt-2 mt-2" *ngIf="list.hasTeaser=='Yes' ,else noTeaser">
+                    <i class="material-icons">play_circle_outline</i>
+                    <span class="badge badge-has-teaser text-white">Has Teaser</span>
+                </div> 
+                <ng-template #noTeaser>
+                    <div class="mt-3 p-2"></div>
+                </ng-template>
+                <span *ngIf="userRole=='admin'">
+                    <div class="mt-3">
+                        <a  type="button" (click)="clickEdit(list.id)" class=" btn bg-button-color text-white shadow-lg">
+                            <i class="material-icons" id="icon-size">edit</i>Edit
+                        </a>
+                    </div>
+                </span>
+                <span *ngIf="userRole!='admin'">
+                    <div class="mt-3">
+                        <a type="button" (click)="getId(list.id)" class="btn bg-button-color text-white shadow-lg ">
+                            <i class="material-icons"id="icon-size">favorite</i>Add to Favorites
+                        </a>
+                    </div>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-lg-12 col-md-12 col-sm-12">
+                <div class="mt-3">{{list.description}}</div>
+                <div class="pt-1 heading-color">
+                    <div>Rating : {{list.rating}}</div>
+                    <div>Language : {{list.language}}</div>
+                    <div>Runtime : {{list.runtime}}</div>
+                    <div class="justify-content-start" class="pt-1"><i class="material-icons text-primary" id="icon-size">thumb_up</i>{{list.like}}%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer mt-2 border-light card-color">
+        <span *ngIf="userRole=='admin'">
+            <i class="material-icons" id="icon-size">schedule</i>{{list.dateOfLaunch|date: 'dd/MM/yyyy'}}
+            <span *ngIf="id==list.id" class="ml-3 mt-2 alert alert-success ml-2 p-1">Movie Details Saved Successfully</span>
+        </span>
+        <span *ngIf="userRole!='admin'">
+            <button type="button" class="btn bg-vedio-btn video-btn text-white" data-toggle="modal" attr.data-src="{{list.trailer}} " data-target="#myModal">
+                Play Trailer
+            </button>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>        
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <span *ngIf="favoriteMovieId == list.id && favoriteStatus==true" class="alert alert-success ml-2 p-1">Movie Added To Favorite SuccessFully</span>
+        </span>
+    </div>
+</div>
+
+  
+ 
+
+ 
+            
+            
+        
+          
+          
+          

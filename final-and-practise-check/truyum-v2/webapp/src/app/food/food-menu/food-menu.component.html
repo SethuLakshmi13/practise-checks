@@ -1,0 +1,25 @@
+
+	<app-food-search  (search)="filterData($event)"></app-food-search>
+	<div class="container-fluid mb-5">
+        <div class="row ml-1 mr-1 mt-1 mb-1">
+			<div class="col-12 col-lg-3 col-md-6 col-sm-12 pt-2" *ngFor="let items of filteredFoodItems"> 
+				<app-food-item
+					 [items]="items"
+					 [category]="category"
+					 [userRole]="getRole()"
+					 (edit)="displayEdit($event)"
+					 (addItem)="addCartItem($event)"
+					 [status]="status"
+					 [id]="id"
+					 [cartItemId]="cartItemId"
+					 >
+				</app-food-item>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+
+

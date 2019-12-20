@@ -1,0 +1,18 @@
+<app-movie-search  (search)="filteredData($event)"></app-movie-search>
+<div class="container-fluid mb-5">
+    <div class="row">
+	    <div class="col-12 col-lg-3 col-md-6 col-sm-12 pt-2" *ngFor ="let list of filteredMovieList ">
+            <app-movie-list
+                [list]="list"
+                [id]="id"
+                [userRole]="getRole()"
+                (edit)="displayEdit($event)"
+                (addMovie)="addNewMovie($event)"
+                [favoriteMovieId]="favoriteMovieId"
+                [favoriteStatus]="favoriteStatus"
+            >
+            </app-movie-list>
+        </div>
+    </div>
+</div>
+

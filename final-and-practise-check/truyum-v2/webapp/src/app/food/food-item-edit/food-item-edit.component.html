@@ -1,0 +1,101 @@
+<div class="container mb-5 mt-5">
+	<h2>Edit Menu Item</h2>
+	<form [formGroup]="editForm" (submit)="send(editForm.value)">
+		<div class="form-row p-3">
+			<div class="form-group col-lg-12 col-md-12 col-sm-12">
+				<label for="item-name">Item Name </label>
+					<input 
+						type="text" 
+						id="item-name" 
+						class="form-control"
+						name="item-name"
+						required
+						formControlName="name"/>
+					<div *ngIf="(editForm.get('name').errors?.required) && (editForm.get('name').touched)" class="text-danger">
+						Name is required
+					</div>
+					<div *ngIf="(editForm.get('name').errors?.minlength) && (editForm.get('name').touched)" class="text-danger">
+						Name should have atleast 2 characters
+					</div>
+			</div>
+			<div class="form-group col-lg-3 col-md-3 col-sm-12">
+				<label for="price">Price </label>
+					<input 
+						type="text" 
+						id="price"
+						name="price"
+						class="form-control"
+						formControlName="price"
+						required/>
+					<div *ngIf="(editForm.get('price').errors?.required) && (editForm.get('price').touched)" class="text-danger">
+						Price is required
+					</div>
+			</div>
+			<div class="form-group col-lg-3 col-md-3 col-sm-12">
+				<label for="date-of-launch">Date of Launch </label>
+					<input 
+						type="text"  
+						id="date-of-launch"
+						name="date-of-launch"
+						class="form-control"
+						formControlName="dateOfLaunch"
+						required/> 
+				<div *ngIf="!(editForm.get('dateOfLaunch').valid) && (editForm.get('dateOfLaunch').touched)" class="text-danger">
+					Date is required with appropriate format(mm/dd/yyyy)
+				</div>
+			</div>
+			<div formGroupName="division" class="form-group col-lg-3 col-md-3 col-sm-12">
+				<label for="category">Category </label>
+					<select
+						id="category"
+						name="category"
+				 		class="form-control"
+				 		formControlName="category">
+						<option
+							*ngFor="let categoryName of category"
+							[value]="categoryName.name"
+							[selected]="category==categoryName.name">{{categoryName.name}}
+						</option>
+					</select>
+			</div>
+			<div class="form-group col-lg-3 col-md-3 col-sm-12">
+				<div class="form-check">
+					<label for="yes" class="form-check-label">Active</label>
+				<div >
+				<span >
+					<input 
+						type="radio"
+						id="yes"
+						name="active"
+						[value]="true"
+						class="form-check-input"
+						formControlName="active"/> 
+					<label for="yes" class="form-check-label pr-4">Yes</label>
+					<input 
+						type="radio"
+						id="no"
+						name="active"
+						[value]="false"
+						class="form-check-input"
+						formControlName="active"/> 
+					<label for="no" class="form-check-label pr-4">No</label></span>
+						<div *ngIf="(!editForm.get('active').valid) && (editForm.get('active').touched)" class="text-danger">
+							Select atleast one Field
+						</div>
+				</div>
+				</div>
+			</div>
+			<div class="form-group col-lg-3 col-md-3 col-sm-12">
+				<div class="form-check">
+					<input 
+						type="checkbox" 
+						class="form-check-input" 
+						id="free-delivery"
+						formControlName="freeDelivery"/>
+					<label for="free-delivery" class=" form-check-label">Free Delivery</label>
+				</div>
+			</div>
+		</div>
+		<div><button type="submit" class="btn bg-color text-white ml-3">Save</button></div>
+	</form>
+</div>

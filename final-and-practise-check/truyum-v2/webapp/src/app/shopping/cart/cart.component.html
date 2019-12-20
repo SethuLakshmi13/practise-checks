@@ -1,0 +1,31 @@
+<div class="container mt-5 " >
+	<div *ngIf="cartEmptyStatus,else cartNotEmpty">
+		<h3 class="d flex justify-content-center mt-5">Cart:</h3>
+			<div class="alert alert-danger d flex justify-content-center mt-3">No Items in the Cart.Use 'Add To Cart' option in
+				<a routerLink="/food-menu">MenuItemList</a>
+			</div>
+	</div>
+	<ng-template #cartNotEmpty>
+	<div class="form-row">
+		<div class="form-group col-lg-4 col-md-12 col-sm-12"></div>
+		<div class="form-group col-lg-4 col-md-12 col-sm-12 mt-5">
+			<span *ngIf="cartEmptyStatus==false">
+				<h3 class="d flex justify-content-center">Cart:</h3>
+				<div class="alert alert-danger  " *ngIf="removeStatus==true">Item Removed from Cart Successfully</div>
+					<ul class="list-group mt-5">
+           				 <div *ngFor="let items of cartItems">
+						<li class="list-group-item text-secondary d-flex justify-content-between"><span id="list-content-size" >{{items.name}}</span>
+							<span class="price-color">{{items.price}}<div><a (click)="getId(items.id)">
+								<i class="material-icons text-secondary">delete_forever</i></a></div></span>
+            			</li>
+            			</div>
+						<li class="list-group-item d-flex justify-content-between"><h4>Total</h4>
+							<span class="price-color">Rs.{{total}}</span>
+						</li>
+					</ul>
+			</span>
+		</div>
+    	<div class="form-group col-lg-4 col-md-12 col-sm-12"></div>
+	</div>
+	</ng-template>
+</div>

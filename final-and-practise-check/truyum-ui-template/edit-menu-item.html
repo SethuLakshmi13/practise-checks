@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>edit-menu-item</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet"  type="text/css" href="css\style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css"/> 
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-color">
+		<h2 class ="text-white"><i class="material-icons">restaurant_menu</i>truYum</h2>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#collapse-nav-bar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapse-nav-bar">	
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link  text-white" href="menu-item-list-admin.html">Menu Items</a>
+				</li>
+				<li class="nav-item">
+					<i class="material-icons text-white"style='font-size:34px;'>perm_identity</i>
+				</li>
+				<li class="nav-item ml-auto pt-2">
+					<span class="text-white nav-text">John</span>
+				</li
+				<li class="nav-item">
+					<a class="nav-link text-white" href="menu-item-list.html">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="container mb-5 mt-5">
+	<h2>Edit Menu Item</h2>
+	<form action="edit-menu-item-success.html">
+		<div class="form-row p-3">
+		<div class="form-group col-lg-12 col-md-12 col-sm-12">
+			<label for="item-name">Item Name </label>
+			<input type="text" class="form-control" id="item-name" name="item-name"/>
+		</div>
+		<div class="form-group col-lg-3 col-md-3 col-sm-12">
+			<label for="price">Price </label>
+			<input type="text" class="form-control" id="price" name="price"/>
+		</div>
+		<div class="form-group col-lg-3 col-md-3 col-sm-12">
+			<label for="date-of-launch">Date of Launch </label>
+			<input type="text" class="form-control" id="date-of-launch"/> 
+		</div>
+		<div class="form-group col-lg-3 col-md-3 col-sm-12">
+			<label for="category">Category </label>
+			<select class="custom-select" id="category">
+				<option></option>
+				<option value="mainCourse">Main Course</option>
+				<option value="starters">Starters</option>
+				<option value="dessert">Desert</option>
+			</select>
+		</div>
+		<div class="form-group col-lg-3 col-md-3 col-sm-12">
+			<div class="form-check">
+				<label for="yes" class=" form-check-label ">Active</label>
+				<div>
+				<span><input type="radio" class="form-check-input" id="yes"/> 
+				<label for="yes" class=" form-check-label  pr-4">Yes</label>
+				<input type="radio" class="form-check-input" id="no"/> 
+				<label for="no" class=" form-check-label ">No</label></span>
+				</div>
+			</div>
+		</div>
+		<div class="form-group col-lg-3 col-md-3 col-sm-12">
+			<div class="form-check">
+				<input type="checkbox" class="form-check-input" id="free-delivery" checked/>
+				<label for="free-delivery" class=" form-check-label">Free Delivery</label>
+			</div>
+		</div>
+		</div>
+		<div><button type="submit" class="btn bg-color text-white ml-3">Save</button></div>
+	</form>
+	</div>
+</body>
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script> 
+<script> 
+  $('#date-of-launch').datepicker({ 
+    uiLibrary: 'bootstrap4', 
+    format: 'dd/mm/yyyy' 
+  }); 
+</script>
+<footer class="fixed-bottom bg-color text-white p-2">Copyright2019</footer>
+</html>
